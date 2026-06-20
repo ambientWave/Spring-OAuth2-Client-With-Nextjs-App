@@ -1,0 +1,38 @@
+services:
+  app:
+    image: openjdk:25-ea-25-jdk-slim
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+      #  -Dspring-boot.run.jvmArguments='-Dspring.docker.compose.enabled=false'" to remove the logs of initialization of the spring boot
+    command: >
+      sh -c "chmod +x mvnw && ./mvnw spring-boot:run"
+    environment:
+      - SPRING_DOCKER_COMPOSE_ENABLED=false
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/oauth2_client
+    networks:
+      - db
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_DB=oauth2_client
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin123
+      - PGDATA=/data/postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/data/postgres
+    networks:
+      - db
+    restart: unless-stopped
+networks: # for creating a network so that docker containers can communicate through it
+  db:
+    driver: bridge
+volumes: # for persisting data
+  db:

@@ -1,0 +1,65 @@
+services:
+  backend:
+    image: openjdk:25-ea-25-jdk-slim
+    working_dir: /app
+    volumes:
+      - ./oauth2Client:/app
+    ports:
+      - "8080:8080"
+    command: >
+      sh -c "chmod +x mvnw && ./mvnw spring-boot:run"
+    environment:
+      - SPRING_DOCKER_COMPOSE_ENABLED=false
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/oauth2_client
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin123
+      - JWT_SECRET=404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      - GITHUB_CLIENT_ID=${GITHUB_CLIENT_ID}
+      - GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+    networks:
+      - app-network
+    depends_on:
+      - db
+
+  frontend:
+    image: node:25-alpine
+    working_dir: /app
+    volumes:
+      - ./web_frontend/homepage:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    command: >
+      sh -c "npm install && npm run dev"
+    environment:
+      - PORT=3000
+    networks:
+      - app-network
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_DB=oauth2_client
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin123
+      - PGDATA=/data/postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/data/postgres
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:
+
