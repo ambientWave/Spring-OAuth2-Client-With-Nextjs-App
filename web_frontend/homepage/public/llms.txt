@@ -1,0 +1,24 @@
+# Medigize - Premium Global Medical Travel
+
+Medigize is a leading platform connecting patients with elite medical specialists and clinics worldwide. We bridge the gap in global healthcare by providing seamless travel logistics, specialist matching, and post-care support.
+
+## Core Services
+- **Specialist Matching**: Connection to the top 1% of surgeons and doctors globally.
+- **Travel Logistics**: Full coordination of flights, medical visas, and premium accommodation.
+- **Post-Care Support**: Continuous monitoring and rehabilitation coordination in the patient's home country.
+
+## Key Destinations
+- Turkey (Cosmetic, Dental, Cardiac)
+- Germany (Oncology, Orthopedics)
+- South Korea (Dermatology, Plastic Surgery)
+- Thailand (Wellness, Specialized surgeries)
+
+## Important Links
+- [Specialties](https://medigize.com/specialties)
+- [How it Works](https://medigize.com/how-it-works)
+- [Request a Consultation](https://medigize.com/get-started)
+
+## Organization Details
+- **Company**: Medigize Global
+- **Mission**: To provide healthcare without boundaries through transparency and quality.
+- **Year Founded**: 2026

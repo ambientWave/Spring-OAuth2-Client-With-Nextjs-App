@@ -1,0 +1,71 @@
+{
+    "metadata": {
+        "title": "Medigize | Premium Medical Travel & Global Healthcare",
+        "description": "Experience world-class healthcare without boundaries. Medigize connects you with top-tier clinics and specialists worldwide. Seamless medical travel tailored for you.",
+        "ogTitle": "Medigize | Global Healthcare Access",
+        "ogDescription": "Your journey to health starts here. Quality care, globally recognized specialists, and seamless travel support."
+    },
+    "nav": {
+        "specialties": "Specialties",
+        "destinations": "Destinations",
+        "howItWorks": "How it Works",
+        "getStarted": "Get Started"
+    },
+    "hero": {
+        "badge": "Seamless Medical Travel for {location}",
+        "title": "World-Class Care,",
+        "subtitle": "Anywhere on Earth.",
+        "description": "Experience healthcare without borders. We bridge the gap between global specialists and patients seeking premium, affordable medical treatments worldwide.",
+        "findClinic": "Find a Clinic",
+        "consultSpecialist": "Consult a Specialist",
+        "stats": {
+            "count": "50+",
+            "label": "Clinics Worldwide",
+            "network": "Trusted Global Network"
+        }
+    },
+    "services": {
+        "title": "Comprehensive Support",
+        "description": "Everything you need for a stress-free medical journey.",
+        "items": {
+            "matching": {
+                "title": "Specialist Matching",
+                "description": "Access top 1% of surgeons and doctors curated for your specific needs."
+            },
+            "logistics": {
+                "title": "Travel Logistics",
+                "description": "Full coordination of flights, accommodation, and medical visas."
+            },
+            "postCare": {
+                "title": "Post-Care Support",
+                "description": "Continuous monitoring and rehabilitation coordination back home."
+            }
+        }
+    },
+    "cta": {
+        "title": "Ready for better health?",
+        "description": "Join thousands of patients who found elite medical care abroad with Medigize.",
+        "button": "Start Your Journey"
+    },
+    "footer": {
+        "rights": "© 2026 Medigize Global. All rights reserved.",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "contact": "Contact"
+    },
+    "auth": {
+        "loginTitle": "Welcome Back",
+        "loginSubtitle": "Sign in to your account",
+        "registerTitle": "Create an Account",
+        "registerSubtitle": "Join Medigize to start your journey",
+        "name": "Full Name",
+        "email": "Email Address",
+        "password": "Password",
+        "signIn": "Sign In",
+        "signUp": "Sign Up",
+        "continueWithGithub": "Continue with GitHub",
+        "continueWithGoogle": "Continue with Google",
+        "noAccount": "Don't have an account?",
+        "alreadyHaveAccount": "Already have an account?"
+    }
+}
